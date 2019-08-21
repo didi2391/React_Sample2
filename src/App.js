@@ -12,16 +12,6 @@ class App extends Component {
     ]
   };
 
-  // switchNamehandler = () => {
-  //   this.setState({
-  //     persons: [
-  //       { name: "Maximilian", age: 22, id: 1 },
-  //       { name: "ManuVer", age: 23, id: 2 },
-  //       { name: "Stephenie", age: 25, id: 3 }
-  //     ]
-  //   })
-  // }
-
   render() {
 
     const switchNamehandler = () => {
