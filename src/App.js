@@ -12,24 +12,35 @@ class App extends Component {
     ]
   };
 
-  switchNamehandler = () => {
-    this.setState({
-      persons: [
-        { name: "Maximilian", age: 22, id: 1 },
-        { name: "ManuVer", age: 23, id: 2 },
-        { name: "Stephenie", age: 25, id: 3 }
-      ]
-    })
-  }
+  // switchNamehandler = () => {
+  //   this.setState({
+  //     persons: [
+  //       { name: "Maximilian", age: 22, id: 1 },
+  //       { name: "ManuVer", age: 23, id: 2 },
+  //       { name: "Stephenie", age: 25, id: 3 }
+  //     ]
+  //   })
+  // }
 
   render() {
+
+    const switchNamehandler = () => {
+      this.setState({
+        persons: [
+          { name: "Maximilian", age: 22, id: 1 },
+          { name: "ManuVer", age: 23, id: 2 },
+          { name: "Stephenie", age: 25, id: 3 }
+        ]
+      })
+    }
+
     const personsArray = this.state.persons.map(person => {
       return <Person key={person.id} name={person.name} age={person.age} />;
     });
 
     return (
       <div className="App">
-        <button onClick={this.switchNamehandler}>Switch Name</button>
+        <button onClick={switchNamehandler}>Switch Name</button>
         {personsArray}
       </div>
     );
